@@ -1,0 +1,26 @@
+.Main {
+    background: url("../../../assets/images/bg.jpg") center center/cover no-repeat;
+    height: 100vh;
+    padding: 150px 86px 0 137px;
+}
+
+.hello_text {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+.title span {
+    font-family: 'DIN Pro Black';
+}
+
+.pink_btn {
+    display: inline-block;
+    height: 90px;
+    position: relative;
+    top: 10px;
+}

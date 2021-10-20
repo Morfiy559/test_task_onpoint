@@ -11,8 +11,9 @@
 
 .slider-img {
   position: absolute;
-  width: 100%;
-  transition: all 1s ;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
 }
 
 .slider-img-prev {
@@ -21,4 +22,17 @@
 
 .slider-img-next {
   transform: translateX(100%);
+}
+.fast{
+  transition: all .25s;
+}
+.home{
+  position: absolute;
+  top: 55px;
+  left: 135px;
+  z-index: 1;
+  height: 24px;
+}
+.home img{
+  height: 100%;
 }

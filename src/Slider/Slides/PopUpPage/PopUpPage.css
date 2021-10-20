@@ -1,0 +1,63 @@
+.PopUpPage {
+    background: url("../../../assets/images/bg3.jpg") center center/cover no-repeat;
+    height: 100vh;
+    padding: 230px 30px 100px 200px;
+}
+
+.image {
+    position: absolute;
+    height: 80vh;
+    bottom: 0;
+    left: 10px;
+    z-index: 1;
+}
+
+.important_block {
+    /*margin: 200px 30px 100px 200px;*/
+}
+
+.important_message {
+    margin-left: 100px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.important_message .big {
+    line-height: 100px;
+    font-size: 100px;
+    letter-spacing: 15px;
+}
+
+.important_message .big .black {
+    font-family: 'DIN Pro Black';
+}
+.blocks{
+    margin-top: 50px;
+}
+.plate{
+    position: relative;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px #e3e3e3;
+    padding: 40px 40px 40px 100px;
+    border-radius: 30px;
+    width: 250px;
+    font-size: 25px;
+}
+.icon2{
+    width: 70px;
+    position: absolute;
+    top:-35px;
+    left: 100px;
+}
+.calendar{
+    margin-left: 40px;
+    position: relative;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 1px #e3e3e3;
+    padding: 40px;
+    border-radius: 30px;
+    width: 250px;
+    font-size: 25px;
+}
