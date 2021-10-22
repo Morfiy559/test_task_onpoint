@@ -9,13 +9,14 @@ let Slider = () => {
     let toNext = () => {
         setActiveSlideIndex(1);
     }
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const Slides = [
         <Main toNext={toNext} key='1'/>,
-        <ScrollPage key='2'/>,
+        <ScrollPage activeSlideIndex={activeSlideIndex} key='2'/>,
         <PopUpPage key='3'/>,
     ]
     // Индекс текущего слайда
-    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
     const [fast, setFast] = useState('');
     let startX, distX, dir;
     let startTime;
@@ -30,9 +31,10 @@ let Slider = () => {
     let end = (event) => {
         let endTime = new Date().getTime();
         let time = endTime - startTime;
-        if (time < 500) {
-            //определяем пройденную дистанцию
-            distX = event.changedTouches[0].pageX - startX;
+        //определяем пройденную дистанцию
+        distX = event.changedTouches[0].pageX - startX;
+        if (time < 500 && time > 100 && distX!==0) {
+
             //определяем направление свайпа
             dir = (distX < 0) ? "left" : "right";
             switch (dir) {
@@ -94,7 +96,7 @@ let Slider = () => {
                      key={prevSlideIndex}>
                     {Slides[prevSlideIndex]}
                 </div>
-                <div onTouchStart={start} onTouchEnd={end} className={"slider-img" + fast}
+                <div  onTouchStart={start} onTouchEnd={end} className={"slider-img" + fast}
                      key={activeSlideIndex}>
                     {Slides[activeSlideIndex]}
                 </div>

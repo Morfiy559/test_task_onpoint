@@ -10,6 +10,7 @@
 }
 .message_block{
     position: relative;
+    z-index: 1;
 }
 .range {
     top: 230px;
@@ -33,7 +34,7 @@
 .message_block_text{
     width: 80%;
     height: 50vh;
-    margin-left: 80px;
+    margin-left: 45px;
     background-color: #fffdf7;
     border-radius: 20px;
     font-size: 25px;
@@ -41,3 +42,76 @@
     padding: 30px;
     box-shadow: 0 0 10px 1px #e3e3e3;
 }
+#pink_sperm_scroll_1{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 900px;
+    animation: fadeIn 2s ease-out;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        top: 50px;
+        right: -30px;
+    }
+    100%{
+        opacity: 1;
+        top: 20px;
+        right: 0;
+    }
+}
+#pink_sperm_scroll_2{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 1050px;
+    animation: fadeIn2 2s ease-out;
+}
+#pink_sperm_scroll_3{
+    position: absolute;
+    width: 1075px;
+    top: 0;
+    left: 60px;
+    animation: fadeIn2 2s ease-out;
+}
+@keyframes fadeIn2 {
+    0%{
+        opacity: 0;
+        top: 20px;
+        left: 80px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+        left: 60px;
+    }
+}
+#pink_sperm_scroll_4{
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 1000px;
+    animation: fadeIn3 2s ease-out;
+}
+#pink_sperm_scroll_5{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1000px;
+    animation: fadeIn3 2s ease-out;
+
+}
+@keyframes fadeIn3 {
+    0%{
+        opacity: 0;
+        top: 20px;
+        right: -20px;
+    }
+    100%{
+        opacity: 1;
+        top: 0;
+        right: 0;
+    }
+}
+

@@ -1,3 +1,4 @@
+import './assets/din_pro.css';
 import './App.css';
 import Slider from "./Slider/Slider";
 

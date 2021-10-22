@@ -1,17 +1,33 @@
-import React, {createRef, useState} from "react";
+import React, {createRef, useEffect, useState} from "react";
 import './ScrollPage.css';
+import pink_sperm_scroll_1 from '../../../assets/images/pink_sperm_scroll_1.png';
+import pink_sperm_scroll_2 from '../../../assets/images/pink_sperm_scroll_2.png';
+import pink_sperm_scroll_3 from '../../../assets/images/pink_sperm_scroll_3.png';
+import pink_sperm_scroll_4 from '../../../assets/images/pink_sperm_scroll_4.png';
+import pink_sperm_scroll_5 from '../../../assets/images/pink_sperm_scroll_5.png';
 
-let ScrollPage = () => {
+let ScrollPage = ({activeSlideIndex}) => {
     const Text = createRef();
+
+    const [isId, setIsId] = useState(true)
+
     const [sliderVal, setSliderVal] = useState(0);
 
     let onChange = (e) => {
         setSliderVal(e.target.value);
-        Text.current.scrollTop = sliderVal*4;
+        Text.current.scrollTop = sliderVal * 4;
     }
-    let onScroll = (e) =>{
+    let onScroll = (e) => {
         e.preventDefault();
     }
+    useEffect(() => {
+        if(activeSlideIndex===1){
+            setIsId(true)}
+        else {
+            setTimeout(()=>{setIsId(false)},500)
+        }
+    },[activeSlideIndex]);
+
     return (
         <div className='ScrollPage'>
             <div className='message_text'>Текст <br/> сообщения</div>
@@ -47,6 +63,11 @@ let ScrollPage = () => {
                     porro quisquam est, quae ab illo inventore veritatis et...
                 </div>
             </div>
+            <img id={isId? 'pink_sperm_scroll_1':''} src={pink_sperm_scroll_1} alt="pink_sperm_scroll_1"/>
+            <img id={isId? 'pink_sperm_scroll_2':''} src={pink_sperm_scroll_2} alt="pink_sperm_scroll_2"/>
+            <img id={isId? 'pink_sperm_scroll_3':''} src={pink_sperm_scroll_3} alt="pink_sperm_scroll_3"/>
+            <img id={isId? 'pink_sperm_scroll_4':''} src={pink_sperm_scroll_4} alt="pink_sperm_scroll_4"/>
+            <img id={isId? 'pink_sperm_scroll_5':''} src={pink_sperm_scroll_5} alt="pink_sperm_scroll_5"/>
         </div>
     )
 }

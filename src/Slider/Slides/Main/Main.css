@@ -1,7 +1,7 @@
 .Main {
     background: url("../../../assets/images/bg.jpg") center center/cover no-repeat;
     height: 100vh;
-    padding: 150px 86px 0 137px;
+    padding: 200px 86px 0 100px;;
 }
 
 .hello_text {
@@ -11,7 +11,8 @@
 
 .title {
     text-transform: uppercase;
-    font-size: 100px;
+    font-size: 108px;
+    line-height: 110px;
 }
 
 .title span {
@@ -23,4 +24,152 @@
     height: 90px;
     position: relative;
     top: 10px;
+    margin-left: 26px;
+}
+
+#bact {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 150px;
+}
+
+#bact_ball {
+    position: absolute;
+    top: 94px;
+    right: 237px;
+    width: 70px;
+    animation: fly1 5s infinite linear;
+}
+
+@keyframes fly1 {
+    0% {
+        top: 94px;
+        right: 237px;
+        width: 70px;
+    }
+    50% {
+        top: 90px;
+        right: 227px;
+        width: 65px;
+    }
+    100% {
+        top: 94px;
+        right: 237px;
+        width: 70px;
+    }
+}
+
+#pink_sperm_1 {
+    position: absolute;
+    top: 175px;
+    width: 610px;
+    right: 0px;
+}
+
+#bact_ball_1 {
+    position: absolute;
+    top: 220px;
+    right: 86px;
+    width: 120px;
+    animation: fly 20s infinite linear;
+}
+
+@keyframes fly {
+    0% {
+        top: 220px;
+        right: 220px;
+        transform: rotatez(0deg);
+    }
+    25% {
+        top: 210px;
+        right: 200px;
+        transform: rotatez(90deg);
+    }
+    50% {
+        top: 230px;
+        right: 190px;
+        transform: rotatez(180deg);
+    }
+    75% {
+        top: 240px;
+        right: 200px;
+        transform: rotatez(270deg);
+
+    }
+    100% {
+        top: 220px;
+        right: 220px;
+        transform: rotatez(360deg);
+    }
+}
+
+#bakti_1 {
+    position: absolute;
+    width: 85px;
+    left: 54px;
+    bottom: 164px;
+    animation: fly2 10s infinite linear;
+}
+
+@keyframes fly2 {
+    0% {
+        left: 54px;
+        bottom: 164px;
+    }
+    50% {
+        left: 74px;
+        bottom: 144px;
+    }
+    100% {
+        left: 54px;
+        bottom: 164px;
+    }
+}
+
+#bact_ball_2 {
+    position: absolute;
+    right: 250px;
+    bottom: 0;
+    width: 220px;
+    animation: fly3 7s infinite linear;
+}
+
+@keyframes fly3 {
+    0% {
+        right: 250px;
+        bottom: 0;
+        width: 220px;
+    }
+    50% {
+        right: 230px;
+        bottom: -20px;
+        width: 240px;
+    }
+    100% {
+        right: 250px;
+        bottom: 0;
+        width: 220px;
+    }
+}
+
+#pink_sperm {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    bottom: -32px;
+}
+
+#blur_ball {
+    position: absolute;
+    bottom: 42px;
+    left: 359px;
+    width: 82px;
+}
+
+#blur_ball_2 {
+    position: absolute;
+    top: 38px;
+    right: 35px;
+    width: 87px;
 }
