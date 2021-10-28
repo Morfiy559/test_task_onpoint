@@ -65,7 +65,7 @@ let PopUpPage = () => {
 }
 let PopUpWindow = ({close}) => {
     const [checked, setChecked] = useState(1);
-    const [fadeTransition, setFadeTransition] = useState(null);
+    const [, setFadeTransition] = useState(null);
     const [fadeState, setFadeState] = useState('fade-in');
     let check = (num) => {
         if (num) {

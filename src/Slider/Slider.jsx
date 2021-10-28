@@ -25,6 +25,7 @@ let Slider = () => {
     let start = (event) => {
         //определяем начальные координаты мышки
         startX = event.changedTouches[0].pageX;
+        // startY = event.changedTouches[0].pageY;
         startTime = new Date().getTime();
     }
     //конец swipe
@@ -33,8 +34,9 @@ let Slider = () => {
         let time = endTime - startTime;
         //определяем пройденную дистанцию
         distX = event.changedTouches[0].pageX - startX;
-        if (time < 500 && time > 100 && distX!==0) {
 
+        // distY = event.changedTouches[0].pageY - startY;
+        if (time < 500 && time > 100 && Math.abs(distX) > 50) {
             //определяем направление свайпа
             dir = (distX < 0) ? "left" : "right";
             switch (dir) {
@@ -96,7 +98,7 @@ let Slider = () => {
                      key={prevSlideIndex}>
                     {Slides[prevSlideIndex]}
                 </div>
-                <div  onTouchStart={start} onTouchEnd={end} className={"slider-img" + fast}
+                <div onTouchStart={start} onTouchEnd={end} className={"slider-img" + fast}
                      key={activeSlideIndex}>
                     {Slides[activeSlideIndex]}
                 </div>
